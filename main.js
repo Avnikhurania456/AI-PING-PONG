@@ -26,6 +26,8 @@ var ball = {
 function setup(){
   var canvas =  createCanvas(700,600);
   video.parent('game_console');
+  game_status="";
+
   video.createCapture(VIDEO);
   video.size(700,600);
   canvas.parent('canvas');
@@ -55,8 +57,19 @@ function modelLoaded()
 
 
 
+function startGame()
+{
+  game_status="status";
+  document.getElementById("status").innerHTML="Game Is Loaded";
+
+}
+
+
+
 
 function draw(){
+  if(game_status=="start")
+
 
  background(0); 
 
